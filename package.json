@@ -1,0 +1,32 @@
+{
+  "name": "pwa-cache",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@codemirror/commands": "^6.1.0",
+    "@codemirror/lang-javascript": "^6.1.0",
+    "@codemirror/lang-markdown": "^6.0.1",
+    "@codemirror/theme-one-dark": "^6.1.0",
+    "@codemirror/view": "^6.2.4",
+    "codemirror": "^6.0.1",
+    "comlink": "^4.3.1",
+    "idb": "^7.1.1",
+    "marked": "^4.1.0",
+    "workbox-cacheable-response": "^6.5.4",
+    "workbox-expiration": "^6.5.4",
+    "workbox-recipes": "^6.5.4",
+    "workbox-routing": "^6.5.4",
+    "workbox-strategies": "^6.5.4",
+    "workbox-streams": "^6.5.4"
+  },
+  "devDependencies": {
+    "vite": "^4.4.5"
+  }
+}
