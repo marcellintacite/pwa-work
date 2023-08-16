@@ -33,7 +33,12 @@ const renderItem = (data, type) => {
   });
 };
 
-renderItem(await db.getAll("quotes"), "offline");
+const renderOffline = async () => {
+  const quotes = await db.getAll("quotes");
+  renderItem(quotes, "offline");
+};
+
+renderOffline();
 //   register service worker
 
 if ("serviceWorker" in navigator) {
