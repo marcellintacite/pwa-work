@@ -1,7 +1,13 @@
 // hoix du nom du cache
 const cacheName = "cache-v1-quotes";
 // List the files to precache
-const precacheResources = ["/", "/index.html", "main.js", "style.css"];
+const precacheResources = [
+  "/",
+  "/index.html",
+  "main.js",
+  "style.css",
+  "/assets/*",
+];
 
 // When the service worker is installing, open the cache and add the precache resources to it
 self.addEventListener("install", (event) => {
