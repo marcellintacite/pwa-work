@@ -12,6 +12,45 @@ export default defineConfig({
       workbox: {
         globPatterns: ["**/*.{js,css,html,ico,png,svg}"],
       },
+      manifest: {
+        theme_color: "#f5f5f5",
+        background_color: "#1e212b",
+        display: "fullscreen",
+        scope: "/",
+        start_url: "/",
+        name: "Quotes app",
+        short_name: "Quote",
+        description: "Get all inspiring quotes in just one place ",
+        id: "/",
+        icons: [
+          {
+            src: "/maskable_icon_x512.png",
+            sizes: "192x192",
+            type: "image/png",
+            purpose: "any maskable",
+          },
+          {
+            src: "/icon-192x192.png",
+            sizes: "192x192",
+            type: "image/png",
+          },
+          {
+            src: "/icon-256x256.png",
+            sizes: "256x256",
+            type: "image/png",
+          },
+          {
+            src: "/icon-384x384.png",
+            sizes: "384x384",
+            type: "image/png",
+          },
+          {
+            src: "/icon-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+          },
+        ],
+      },
     }),
   ],
   build: {
