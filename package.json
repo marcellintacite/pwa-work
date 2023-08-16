@@ -27,6 +27,7 @@
     "workbox-streams": "^6.5.4"
   },
   "devDependencies": {
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "vite-plugin-pwa": "^0.16.4"
   }
 }
