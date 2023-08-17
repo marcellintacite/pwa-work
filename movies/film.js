@@ -25,12 +25,13 @@ fetch(url, Headers)
   });
 const renderFilms = (data, type) => {
   const showdata = type === "online" ? data : data[0];
+
   showdata.forEach((film) => {
     const filmContainer = document.querySelector(".movies-container");
     const imglink = `https://image.tmdb.org/t/p/original` + film.poster_path;
     filmContainer.innerHTML += `
-    <div class="movie">
-          <img src=${imglink} />
+    <div class="movie hide">
+          <img src=${imglink} loading="lazy" />
 
           <h3>${film.title}</h3>
           <p>
@@ -42,6 +43,23 @@ const renderFilms = (data, type) => {
           </div>
         </div>
 `;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log(entry.target);
+          entry.target.classList.add("show");
+        } else {
+          console.log("not visible");
+          entry.target.classList.remove("hide");
+        }
+      });
+    });
+
+    const items = document.querySelectorAll(".movie");
+    items.forEach((item) => {
+      observer.observe(item);
+    });
   });
 };
 
@@ -49,3 +67,5 @@ const renderOffline = async () => {
   const movies = await db.getAll("films");
   renderFilms(movies, "offline");
 };
+
+renderOffline();
