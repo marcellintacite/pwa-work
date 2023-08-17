@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
-
+import { resolve } from "path";
 export default defineConfig({
   plugins: [
     VitePWA({
@@ -51,7 +51,12 @@ export default defineConfig({
   ],
   build: {
     target: ["edge90", "chrome90", "firefox90", "safari15"],
-
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, "index.html"),
+        admin: resolve(__dirname, "movies/films.html"),
+      },
+    },
     //     rollupOptions: {
     //       input: {
     //         // the default entry point
