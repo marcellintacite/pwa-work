@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quotes pwa</title>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -12,7 +12,7 @@
       referrerpolicy="no-referrer"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="film.css" />
 
     <!-- icone -->
     <link rel="apple-touch-icon" href="public/favicon.jpg" />
@@ -20,7 +20,7 @@
     <!-- Meta data -->
 
     <!-- HTML Meta Tags -->
-    <title>Quotes app - using PWA and Offline support</title>
+    <title>Movies db app - Database movie</title>
     <meta
       name="description"
       content="A small app that shows popular quotes and helps add others"
@@ -67,25 +67,20 @@
   <body>
     <div class="container">
       <div class="header">
-        <h2>Some quotes</h2>
-        <a href="/films.html">Voir les films</a>
+        <h2>Some movies</h2>
+        <a href="/index.html">Voir les citations</a>
       </div>
-      <div class="quotes-container"></div>
-      <!-- <div class="users"></div> -->
 
-      <!-- Button for installation -->
-
-      <button class="install-btn">
-        <i class="fas fas fa-download"></i>
-      </button>
-      <footer>
-        <p>
-          Made with js <i class="fas fa-heart"></i> by
-          <a href="https://twitter.com/BahigaTacite">Tacite Bahiga</a>
-        </p>
-      </footer>
+      <div class="movies-container"></div>
     </div>
 
-    <script type="module" src="main.js"></script>
+    <footer>
+      <p>
+        Made with js <i class="fas fa-heart"></i> by
+        <a href="https://twitter.com/BahigaTacite">Tacite Bahiga</a>
+      </p>
+    </footer>
+
+    <script type="module" src="film.js"></script>
   </body>
 </html>

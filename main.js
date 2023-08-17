@@ -1,6 +1,6 @@
 import { openDB } from "idb";
 
-const db = await openDB("quotes-data", 1, {
+export const db = await openDB("quotes-data", 1, {
   upgrade(db) {
     db.createObjectStore("quotes");
   },
@@ -16,6 +16,8 @@ fetch("https://type.fit/api/quotes")
     db.add("quotes", json, "quotes");
     renderItem(json, "online");
   });
+
+// films file
 
 const renderItem = (data, type) => {
   const showdata = type === "online" ? data : data[0];
